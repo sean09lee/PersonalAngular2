@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 833.333px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: "Didot-Italic";
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <text transform="translate(17 33) scale(0.03)" class="cls-1"><tspan class="cls-2">L</tspan></text>
+  <text transform="translate(9 25) scale(0.03)" class="cls-1"><tspan class="cls-2">S</tspan></text>
+</svg>

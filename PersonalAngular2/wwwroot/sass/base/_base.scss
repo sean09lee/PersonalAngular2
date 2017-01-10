@@ -1,0 +1,180 @@
+@import "mixins";
+@import "normalize";
+@import "variables";
+@import "animations";
+@import "header";
+@import "footer";
+
+/* ============================================================
+  SECTIONS
+============================================================ */
+section.parallax .container {
+	h1 { font-family: "Roboto Slab", serif; }
+	h2 { 
+		font-family: "adobe-garamond-pro";
+		font-style: italic;
+		padding: 10px; 
+	}
+}
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module {
+  h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+  p{
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;  
+  }
+  p:last-child{
+    margin-bottom: 0;  
+  }
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+  padding: 150px 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  h1 {
+    color: white;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #fff;  
+  }
+}
+section.module.parallax-1 {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("../img/backgrounds/desk_bg.jpg");
+}
+section.module.parallax-2 {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/chess_bg.jpg);
+}
+section.module.parallax-gmi {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/gmi_bg.jpg);
+}
+section.module.parallax-sparkstarter {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/dating_bg.jpg);
+}
+section.module.parallax#intro{
+   .container {
+     display: flex;     
+    .left-col{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        .avatar{
+        border-radius: 100%;
+        border-style: dotted;
+        border-width: thin;
+        border-color: #fff;
+        }
+        .avatar:hover{
+        box-shadow: 0 0 20px white;
+        }
+        a, a:hover, a:focus, a:visited{
+        text-decoration: none;
+        color: transparent;
+        border: none;
+        align-self: center;
+        }
+    }
+    .right-col{
+        flex-grow: 1;
+        h1{
+        color: white;
+        z-index: 2; 
+        }
+        h2{
+        color: white;
+        text-align: center;
+        font-style: italic;
+        font-size: 24px;  
+        }
+        .intro_buttons{
+        text-align: center;
+        a{
+            border: 2px solid #fff;      
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            margin: 0 5px;
+            background-color: transparent;
+            color: #fff;
+            text-transform: uppercase;
+            span{
+            display: inline-block;
+            }
+        }
+        a:hover{
+            background-color: #fff;
+            transition: background-color 0.3s ease-in, color 0.3s ease-in;
+            text-decoration: none;
+            color: #181818;
+        }
+        a:visited, a:focus {
+            text-decoration: none;
+        }
+    }
+    }
+  }
+}
+
+@media all and (min-width: 600px) {
+  section.module {
+    h1{
+      font-size: 34px;
+    }
+    h2 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 16px;  
+    }
+  }
+  section.module.parallax {
+    padding: 150px 0;
+    h1 {
+      font-size: 96px;  
+    }
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 100px;
+  }
+}
+
+
+/* ============================================================
+  Flexbox
+============================================================ */
+.flex-container{
+  @include flexbox;
+  @include flex-flow(row wrap);
+  .flex-inner{
+    @include flex(1);
+    @include flexbox;
+    @include justify-content(center);
+    &.first{
+      order: 1;  
+    }
+    &.second{
+      order: 2;  
+    }
+  }
+}
+
+.wlogo{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}

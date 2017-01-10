@@ -36,4 +36,7 @@ You've created a new ASP.NET Core project. [Learn what's new](https://go.microso
 *   [Run tools such as EF migrations and more](https://go.microsoft.com/fwlink/?LinkID=517853)
 *   [Publish to Microsoft Azure Web Apps](https://go.microsoft.com/fwlink/?LinkID=398609)
 
-We would love to hear your [feedback](https://go.microsoft.com/fwlink/?LinkId=518015)
+## Running locally
+- Run scss sass via grunt
+- Can use IIS express to run local hosting
+- with angular 2 html, js, css compile on the fly - no need to rebuild unless you are adding new dependencies or c# changes
