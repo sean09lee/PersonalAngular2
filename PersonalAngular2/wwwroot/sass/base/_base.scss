@@ -1,180 +1,247 @@
-@import "mixins";
-@import "normalize";
-@import "variables";
-@import "animations";
-@import "header";
-@import "footer";
+/* ============================================================
+  Base styles, variables, mixins, etc.
+============================================================ */
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "proxima-nova","adobe-garamond-pro", Garamond, Georgia, serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "adobe-garamond-pro", Garamond, Georgia, serif;
+  text-align: center;
+}
+
+h1{
+  font-size: 34px;
+}
+
+hr{
+  height: 1px;
+  border-style: none;
+  border-width: 0;
+  margin: 32px 32px 32px 32px;
+  color: rgba(26,26,26,.15);
+  background-color: rgba(26,26,26,.15);
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /* ============================================================
-  SECTIONS
+  BOX SIZING & CLEARFIX
 ============================================================ */
-section.parallax .container {
-	h1 { font-family: "Roboto Slab", serif; }
-	h2 { 
-		font-family: "adobe-garamond-pro";
-		font-style: italic;
-		padding: 10px; 
-	}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-section.module:last-child {
-  margin-bottom: 0;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-section.module {
-  h2{
-    margin-bottom: 40px;
-    font-size: 30px;
-  }
-  p{
-    margin-bottom: 40px;
-    font-size: 16px;
-    font-weight: 300;  
-  }
-  p:last-child{
-    margin-bottom: 0;  
-  }
+
+/* ============================================================
+  HTML & BODY
+============================================================ */
+body {
+  //background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("../img/backgrounds/leaf_bg.jpeg");
+  background-color: #353439;
+  
+  font-size: 14px;
+  line-height: 1.5;
 }
-section.module.content {
-  padding: 40px 0;
+
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
 }
-section.module.parallax {
-  padding: 150px 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  h1 {
-    color: white;
-    font-size: 48px;
-    line-height: 1;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 10px #fff;  
-  }
+
+main {
+  display: block;
+  background-color: #fff;
 }
-section.module.parallax-1 {
-  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("../img/backgrounds/desk_bg.jpg");
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-section.module.parallax-2 {
-  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/chess_bg.jpg);
-}
-section.module.parallax-gmi {
-  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/gmi_bg.jpg);
-}
-section.module.parallax-sparkstarter {
-  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/dating_bg.jpg);
-}
-section.module.parallax#intro{
-   .container {
-     display: flex;     
-    .left-col{
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        .avatar{
-        border-radius: 100%;
-        border-style: dotted;
-        border-width: thin;
-        border-color: #fff;
-        }
-        .avatar:hover{
-        box-shadow: 0 0 20px white;
-        }
-        a, a:hover, a:focus, a:visited{
-        text-decoration: none;
-        color: transparent;
-        border: none;
-        align-self: center;
-        }
-    }
-    .right-col{
-        flex-grow: 1;
-        h1{
-        color: white;
-        z-index: 2; 
-        }
-        h2{
-        color: white;
-        text-align: center;
-        font-style: italic;
-        font-size: 24px;  
-        }
-        .intro_buttons{
-        text-align: center;
-        a{
-            border: 2px solid #fff;      
-            padding: 10px 20px 10px 20px;
-            text-align: center;
-            margin: 0 5px;
-            background-color: transparent;
-            color: #fff;
-            text-transform: uppercase;
-            span{
-            display: inline-block;
+
+section{
+    &.parallax {
+        padding: 150px 0;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        
+        .container {
+            h1 { 
+                font-family: "Roboto Slab", serif;
+                color: white;
+                font-size: 100px;
+                line-height: 1;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                text-shadow: 0px 0px 10px #fff;  
+            }
+            h2 { 
+                font-family: "adobe-garamond-pro";
+                font-style: italic;
+                padding: 10px; 
             }
         }
-        a:hover{
-            background-color: #fff;
-            transition: background-color 0.3s ease-in, color 0.3s ease-in;
-            text-decoration: none;
-            color: #181818;
-        }
-        a:visited, a:focus {
-            text-decoration: none;
-        }
     }
+    
+    &.content {
+        padding: 40px 0;
     }
-  }
+}
+
+
+/* ============================================================
+  HEADER & SITE TITLE
+============================================================ */
+/* header */
+header .branding {
+  padding: 20px 0;
+}
+header .logo {
+  margin-bottom: 20px;
+  text-align: center;
+}
+header .logo img {
+  display: inline-block;
+  vertical-align: middle;
+}
+header .social {
+  text-align: center;
+}
+header .social a {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  color: rgba(0, 0, 0, 0);
+  font-size: 0;
+  text-indent: -9999px;
+  background-size: 30px 30px;
+  background-image: url("../img/icons/social-light.png");
+  background-image: url("../img/icons/social-light.svg"), none;
+  background-size: 180px 30px;
+}
+header .social a.fb {
+  background-position: 0 0;
+}
+header .social a.twitter {
+  background-position: -30px 0;
+}
+header .social a.googleplus {
+  background-position: -60px 0;
+}
+header .social a.rss {
+  background-position: -90px 0;
+}
+header .social a.email {
+  background-position: -120px 0;
+}
+header .social a.search {
+  background-position: -150px 0;
+}
+header .social a:hover {
+  opacity: 0.4;
 }
 
 @media all and (min-width: 600px) {
-  section.module {
-    h1{
-      font-size: 34px;
-    }
-    h2 {
-      font-size: 26px;
-    }
-    p {
-      font-size: 16px;  
-    }
+  header .branding {
+    padding-left: 60px;
   }
-  section.module.parallax {
-    padding: 150px 0;
-    h1 {
-      font-size: 96px;  
-    }
+  header .logo {
+    margin-bottom: 0;
+    margin-left: -60px;
+    float: left;
+    width: 60px;
+    height: 60px;
   }
-}
-@media all and (min-width: 960px) {
-  section.module.parallax h1 {
-    font-size: 100px;
+  header .logo img {
+    display: block;
+    margin: 0;
+  }
+  header .social {
+    padding: 15px 0;
+    float: right;
+    width: 100%;
+    text-align: right;
   }
 }
-
+/* site title */
+.site-title {
+  padding: 5px 0;
+  background-color: black;
+  text-align: center;
+}
+.site-title h1 {
+  color: #fff;
+}
 
 /* ============================================================
-  Flexbox
+  TEXT LEVEL SEMANTICS
 ============================================================ */
-.flex-container{
-  @include flexbox;
-  @include flex-flow(row wrap);
-  .flex-inner{
-    @include flex(1);
-    @include flexbox;
-    @include justify-content(center);
-    &.first{
-      order: 1;  
-    }
-    &.second{
-      order: 2;  
-    }
-  }
-}
-
-.wlogo{
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
+a, a:hover, a:visited, a:focus, a:active {
+  text-decoration: none;
 }
