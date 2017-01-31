@@ -1,0 +1,603 @@
+/* *********************************************************
+************************************************************
+                                                            
+	PersonalSite Sass Theme:                                
+	Author: Sean Lee                                      
+	Version: 1.0.0                                          
+    
+    Index
+    1. Base styles
+    2. Home page
+    3. Experience template
+    4. General Mills page
+    5. Sparkstarter page
+    6. Contact modal
+    
+************************************************************
+*************************************************************/
+/*************************************************************
+    1. Base styles
+*************************************************************/
+/* ============================================================
+  Base styles, variables, mixins, etc.
+============================================================ */
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "proxima-nova","adobe-garamond-pro", Garamond, Georgia, serif;
+  text-align: center;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "adobe-garamond-pro", Garamond, Georgia, serif;
+  text-align: center; }
+
+h1 {
+  font-size: 34px; }
+
+hr {
+  height: 1px;
+  border-style: none;
+  border-width: 0;
+  margin: 32px 32px 32px 32px;
+  color: rgba(26, 26, 26, 0.15);
+  background-color: rgba(26, 26, 26, 0.15); }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ============================================================
+  BOX SIZING & CLEARFIX
+============================================================ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* ============================================================
+  HTML & BODY
+============================================================ */
+body {
+  background-color: #353439;
+  font-size: 14px;
+  line-height: 1.5; }
+
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+main {
+  display: block;
+  background-color: #fff; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+section.parallax {
+  padding: 150px 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+  section.parallax .container h1 {
+    font-family: "Roboto Slab", serif;
+    color: white;
+    font-size: 100px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #fff; }
+  section.parallax .container h2 {
+    font-family: "adobe-garamond-pro";
+    font-style: italic;
+    padding: 10px; }
+
+section.content {
+  padding: 40px 0; }
+
+/* ============================================================
+  HEADER & SITE TITLE
+============================================================ */
+/* header */
+header .branding {
+  padding: 20px 0; }
+
+header .logo {
+  margin-bottom: 20px;
+  text-align: center; }
+
+header .logo img {
+  display: inline-block;
+  vertical-align: middle; }
+
+header .social {
+  text-align: center; }
+
+header .social a {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  font-size: 0;
+  text-indent: -9999px;
+  background-size: 30px 30px;
+  background-image: url("../img/icons/social-light.png");
+  background-image: url("../img/icons/social-light.svg"), none;
+  background-size: 180px 30px; }
+
+header .social a.fb {
+  background-position: 0 0; }
+
+header .social a.twitter {
+  background-position: -30px 0; }
+
+header .social a.googleplus {
+  background-position: -60px 0; }
+
+header .social a.rss {
+  background-position: -90px 0; }
+
+header .social a.email {
+  background-position: -120px 0; }
+
+header .social a.search {
+  background-position: -150px 0; }
+
+header .social a:hover {
+  opacity: 0.4; }
+
+@media all and (min-width: 600px) {
+  header .branding {
+    padding-left: 60px; }
+  header .logo {
+    margin-bottom: 0;
+    margin-left: -60px;
+    float: left;
+    width: 60px;
+    height: 60px; }
+  header .logo img {
+    display: block;
+    margin: 0; }
+  header .social {
+    padding: 15px 0;
+    float: right;
+    width: 100%;
+    text-align: right; } }
+
+/* site title */
+.site-title {
+  padding: 5px 0;
+  background-color: black;
+  text-align: center; }
+
+.site-title h1 {
+  color: #fff; }
+
+/* ============================================================
+  TEXT LEVEL SEMANTICS
+============================================================ */
+a, a:hover, a:visited, a:focus, a:active {
+  text-decoration: none; }
+
+/* ============================================================
+  FOOTER
+============================================================ */
+footer {
+  color: #353439;
+  padding: 20px 0;
+  clear: both; }
+  footer nav {
+    width: 100%;
+    position: relative; }
+    footer nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+      footer nav ul li {
+        display: inline-block; }
+        footer nav ul li a {
+          display: block;
+          margin: 0 5px;
+          color: rgba(255, 255, 255, 0.7); }
+          footer nav ul li a:hover {
+            background-color: transparent;
+            transition: none;
+            color: white;
+            text-shadow: 0 0 20px white; }
+  footer .logo {
+    text-align: center;
+    padding: 10px; }
+    footer .logo a {
+      text-decoration: none; }
+      footer .logo a:hover {
+        text-shadow: 0 0 20px white; }
+  footer .copyright {
+    text-align: center;
+    padding: 10px; }
+    footer .copyright small {
+      color: #fff;
+      font-size: 12px; }
+    footer .copyright a {
+      color: #fff; }
+
+/*---------------   
+--Mixin: overlay
+----------------- */
+/*************************************************************
+    2. Navbar header
+*************************************************************/
+/* ============================================================
+  Navigation Bar
+============================================================ */
+/* big landscape desktops */
+@media (min-width: 1025px) {
+  nav {
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    position: absolute;
+    z-index: 1000; }
+    nav.navbar-fixed {
+      background-color: rgba(28, 28, 28, 0.6);
+      position: fixed;
+      z-index: 2000; }
+    nav .logolink {
+      padding-top: 5px; }
+    nav .group-left {
+      float: left;
+      height: 100%; }
+      nav .group-left a, nav .group-left a:hover, nav .group-left a:visited, nav .group-left a:active {
+        text-decoration: none; }
+        nav .group-left a .header-logo, nav .group-left a:hover .header-logo, nav .group-left a:visited .header-logo, nav .group-left a:active .header-logo {
+          height: 100%;
+          width: auto;
+          padding: 5px; }
+          nav .group-left a .header-logo:hover, nav .group-left a:hover .header-logo:hover, nav .group-left a:visited .header-logo:hover, nav .group-left a:active .header-logo:hover {
+            text-shadow: 0 0 20px white; }
+    nav .group-right {
+      float: right;
+      padding-right: 5px;
+      height: 100%; }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+      nav ul li {
+        display: inline-block;
+        margin: 0 5px;
+        transition: all 0.3s; }
+        nav ul li a {
+          background-color: rgba(255, 255, 255, 0);
+          color: #fff;
+          display: block;
+          transition: all 0.3s;
+          text-decoration: none;
+          padding: 10px 20px; }
+          nav ul li a span {
+            font-size: 25px; }
+          nav ul li a:visited {
+            text-decoration: none;
+            color: lightgray; }
+          nav ul li a:hover {
+            background-color: #fff;
+            transition: background-color 0.3s ease-in, color 0.3s ease-in;
+            text-decoration: none;
+            color: black; } }
+
+/* ============================================================
+  Navigation Bar
+============================================================ */
+/* tablets */
+/* ============================================================
+  Navigation Bar
+============================================================ */
+nav {
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  position: absolute;
+  z-index: 1000; }
+  nav .logolink {
+    padding-top: 4px; }
+  nav.navbar-fixed {
+    background-color: rgba(28, 28, 28, 0.6);
+    position: fixed;
+    z-index: 2000; }
+  nav .group-left {
+    float: left;
+    height: 100%; }
+    nav .group-left a, nav .group-left a:hover, nav .group-left a:visited, nav .group-left a:active {
+      text-decoration: none; }
+      nav .group-left a .header-logo, nav .group-left a:hover .header-logo, nav .group-left a:visited .header-logo, nav .group-left a:active .header-logo {
+        height: 100%;
+        width: auto;
+        padding: 5px; }
+        nav .group-left a .header-logo:hover, nav .group-left a:hover .header-logo:hover, nav .group-left a:visited .header-logo:hover, nav .group-left a:active .header-logo:hover {
+          text-shadow: 0 0 20px white; }
+  nav .group-right {
+    float: right;
+    padding-right: 5px;
+    height: 100%; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    nav ul li {
+      display: inline-block;
+      margin: 0 5px;
+      transition: all 0.3s; }
+      nav ul li a {
+        background-color: rgba(255, 255, 255, 0);
+        color: #fff;
+        display: block;
+        transition: all 0.3s;
+        text-decoration: none;
+        padding: 10px 20px; }
+        nav ul li a span {
+          font-size: 25px; }
+        nav ul li a:visited {
+          text-decoration: none;
+          color: lightgray; }
+        nav ul li a:hover {
+          background-color: #fff;
+          transition: background-color 0.3s ease-in, color 0.3s ease-in;
+          text-decoration: none;
+          color: black; }
+
+/*************************************************************
+    2. Home page
+*************************************************************/
+/* big landscape desktops */
+@media (min-width: 1025px) {
+  #home {
+    /* ============================================================
+        SECTIONS
+        ============================================================ */ }
+    #home section h2 {
+      margin-bottom: 40px;
+      font-size: 30px; }
+    #home section p {
+      margin-bottom: 40px;
+      font-size: 16px;
+      font-weight: 300; }
+      #home section p:last-child {
+        margin-bottom: 0; }
+    #home section:last-child {
+      margin-bottom: 0; }
+    #home section.parallax-1 {
+      background-image: -webkit-linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg");
+      background-image: -o-linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg");
+      background-image: linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg"); }
+      #home section.parallax-1 .container {
+        display: flex; }
+        #home section.parallax-1 .container .left-col {
+          justify-content: center;
+          display: flex;
+          flex-grow: 1;
+          align-self: center; }
+          #home section.parallax-1 .container .left-col .avatar {
+            border-radius: 100%;
+            box-shadow: 10px 10px 5px #888888; }
+          #home section.parallax-1 .container .left-col .avatar:hover {
+            box-shadow: 0 0 20px white; }
+          #home section.parallax-1 .container .left-col a, #home section.parallax-1 .container .left-col a:hover, #home section.parallax-1 .container .left-col a:focus, #home section.parallax-1 .container .left-col a:visited {
+            text-decoration: none;
+            color: transparent;
+            border: none; }
+        #home section.parallax-1 .container .right-col {
+          flex-grow: 1; }
+          #home section.parallax-1 .container .right-col h1 {
+            color: white;
+            z-index: 2; }
+          #home section.parallax-1 .container .right-col h2 {
+            color: white;
+            text-align: center;
+            font-style: italic;
+            font-size: 24px; }
+          #home section.parallax-1 .container .right-col .intro_buttons {
+            text-align: center; }
+            #home section.parallax-1 .container .right-col .intro_buttons a {
+              border: 2px solid #fff;
+              padding: 10px 20px 10px 20px;
+              text-align: center;
+              margin: 0 5px;
+              background-color: transparent;
+              color: #fff;
+              text-transform: uppercase; }
+              #home section.parallax-1 .container .right-col .intro_buttons a span {
+                display: inline-block; }
+              #home section.parallax-1 .container .right-col .intro_buttons a:hover {
+                background-color: #fff;
+                transition: background-color 0.3s ease-in, color 0.3s ease-in;
+                text-decoration: none;
+                color: #181818; }
+              #home section.parallax-1 .container .right-col .intro_buttons a:visited, #home section.parallax-1 .container .right-col .intro_buttons a:focus {
+                text-decoration: none; }
+    #home section.parallax-2 {
+      background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/chess_bg.jpg"); }
+    #home #experience {
+      /* ============================================================
+            Flexbox
+            ============================================================ */ }
+      #home #experience .flex-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -moz-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+        #home #experience .flex-container .flex-inner {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -moz-box-flex: 1;
+          -moz-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center; }
+          #home #experience .flex-container .flex-inner.first {
+            order: 1; }
+          #home #experience .flex-container .flex-inner.second {
+            order: 2; }
+      #home #experience .wlogo {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px; } }
+
+@media all and (min-width: 960px) {
+  section.parallax h1 {
+    font-size: 100px; } }
+
+@media all and (min-width: 600px) {
+  section h1 {
+    font-size: 34px; }
+  section h2 {
+    font-size: 26px; }
+  section p {
+    font-size: 16px; }
+  section.parallax {
+    padding: 150px 0; }
+    section.parallax h1 {
+      font-size: 96px; } }
+
+/*************************************************************
+    3. Experience template
+*************************************************************/
+.content-block {
+  width: 320px;
+  height: 200px;
+  background-size: cover;
+  vertical-align: middle; }
+  .content-block.gmi {
+    background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/gmi_bg.jpg"); }
+  .content-block.sparkstarter {
+    background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/dating_bg.jpg"); }
+  .content-block .overlay {
+    height: 100%;
+    width: 100%; }
+    .content-block .overlay:hover {
+      transition: all .3s ease-in;
+      background-color: rgba(26, 26, 26, 0.6); }
+      .content-block .overlay:hover .block-title {
+        transition: all .3s ease-out;
+        transform: translate(0px, 5px); }
+      .content-block .overlay:hover .block-subtitle {
+        transition: all .3s ease-out;
+        transform: translate(0px, -10px); }
+    .content-block .overlay .block-content {
+      letter-spacing: 1px;
+      padding-top: 40px;
+      text-align: center;
+      vertical-align: middle; }
+      .content-block .overlay .block-content .block-title {
+        font-family: "proxima-nova";
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: #fff; }
+      .content-block .overlay .block-content .block-button {
+        border: 2px solid #fff;
+        text-align: center;
+        margin: 0 5px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        line-height: 4em;
+        padding: 1em 1.75em;
+        text-transform: uppercase; }
+        .content-block .overlay .block-content .block-button:hover {
+          background-color: #fff;
+          transition: background-color 0.3s ease-in, color 0.3s ease-in;
+          text-decoration: none;
+          color: #181818; }
+      .content-block .overlay .block-content .block-subtitle {
+        color: #fff;
+        font-family: "adobe-garamond-pro";
+        font-style: italic;
+        padding-top: 10px; }
+
+/*************************************************************
+    4. General Mills page
+*************************************************************/
+#genmills .parallax-gmi {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/genmills_bg.jpg"); }
+
+/*************************************************************
+    5. Sparkstarter page
+*************************************************************/
+#sparkstarter .parallax-sparkstarter {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/sparkstarter_bg.jpg); }
+
+/*************************************************************
+    6. Contact modal
+*************************************************************/

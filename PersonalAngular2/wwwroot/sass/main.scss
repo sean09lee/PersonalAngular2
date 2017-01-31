@@ -22,9 +22,15 @@
 @import "base/animations";
 @import "base/base";
 @import "base/footer";
-@import "base/header";
 @import "base/mixins";
 @import "base/variables";
+
+/*************************************************************
+    2. Navbar header
+*************************************************************/
+@import "navbar/header_large";
+@import "navbar/header_medium";
+@import "navbar/header_small";
 
 /*************************************************************
     2. Home page

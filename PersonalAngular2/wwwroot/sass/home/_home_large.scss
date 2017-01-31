@@ -1,132 +1,135 @@
-#home {
+/* big landscape desktops */
+@media (min-width:1025px) {  
+    #home {
 
-    /* ============================================================
-    SECTIONS
-    ============================================================ */
-    section {
-        h2 {
-            margin-bottom: 40px;
-            font-size: 30px;
-        }
-        
-        p {
-            margin-bottom: 40px;
-            font-size: 16px;
-            font-weight: 300;
-            &:last-child{
-                margin-bottom: 0;    
-            }  
-        }
-        
-        &:last-child{
-            margin-bottom: 0;      
-        }
-        
-        &.parallax-1 {
-            background-image: -webkit-linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url(",,/img/backgrounds/desk_bg.jpg");
-            background-image: -o-linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("../img/backgrounds/desk_bg.jpg");
-            background-image: linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("../img/backgrounds/desk_bg.jpg");
-            
-             .container {
-                display: flex;
-                
-                .left-col {
-                    justify-content: center;
-                    display: flex;
-                    flex-grow: 1;
-                    align-self: center;
-                    
-                    .avatar {
-                        border-radius: 100%;
-                        box-shadow: 10px 10px 5px #888888;
-                    }
-                    
-                    .avatar:hover {
-                        box-shadow: 0 0 20px white;
-                    }
-                    
-                    a, a:hover, a:focus, a:visited {
-                        text-decoration: none;
-                        color: transparent;
-                        border: none;
-                    }
-                }
-                
-                .right-col {
-                    flex-grow: 1;
-                    
-                    h1 {
-                        color: white;
-                        z-index: 2; 
-                    }
-                    h2 {
-                        color: white;
-                        text-align: center;
-                        font-style: italic;
-                        font-size: 24px;  
-                    }
-                    .intro_buttons {
-                        text-align: center;
-                        a {
-                            border: 2px solid #fff;      
-                            padding: 10px 20px 10px 20px;
-                            text-align: center;
-                            margin: 0 5px;
-                            background-color: transparent;
-                            color: #fff;
-                            text-transform: uppercase;
-                        
-                            span {
-                                display: inline-block;
-                            }
-                        
-                            &:hover {
-                                background-color: #fff;
-                                transition: background-color 0.3s ease-in, color 0.3s ease-in;
-                                text-decoration: none;
-                                color: #181818;
-                            }
-                            &:visited, &:focus {
-                                text-decoration: none;
-                            }
-                        }                
-                    }
-                }
-            }
-        }
-        
-        &.parallax-2 {
-            background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/chess_bg.jpg);
-        }       
-    }
-
-    #experience {
         /* ============================================================
-        Flexbox
+        SECTIONS
         ============================================================ */
-        .flex-container {
-            @include flexbox;
-            @include flex-flow(row wrap);
+        section {
+            h2 {
+                margin-bottom: 40px;
+                font-size: 30px;
+            }
+        
+            p {
+                margin-bottom: 40px;
+                font-size: 16px;
+                font-weight: 300;
+                &:last-child{
+                    margin-bottom: 0;    
+                }  
+            }
+        
+            &:last-child{
+                margin-bottom: 0;      
+            }
+        
+            &.parallax-1 {
+                background-image: -webkit-linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg");
+                background-image: -o-linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg");
+                background-image: linear-gradient(rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg");
             
-            .flex-inner {
-                @include flex(1);
-                @include flexbox;
-                @include justify-content(center);
-            
-                &.first {
-                order: 1;  
-                }
-            
-                &.second {
-                order: 2;  
+                 .container {
+                    display: flex;
+                
+                    .left-col {
+                        justify-content: center;
+                        display: flex;
+                        flex-grow: 1;
+                        align-self: center;
+                    
+                        .avatar {
+                            border-radius: 100%;
+                            box-shadow: 10px 10px 5px #888888;
+                        }
+                    
+                        .avatar:hover {
+                            box-shadow: 0 0 20px white;
+                        }
+                    
+                        a, a:hover, a:focus, a:visited {
+                            text-decoration: none;
+                            color: transparent;
+                            border: none;
+                        }
+                    }
+                
+                    .right-col {
+                        flex-grow: 1;
+                    
+                        h1 {
+                            color: white;
+                            z-index: 2; 
+                        }
+                        h2 {
+                            color: white;
+                            text-align: center;
+                            font-style: italic;
+                            font-size: 24px;  
+                        }
+                        .intro_buttons {
+                            text-align: center;
+                            a {
+                                border: 2px solid #fff;      
+                                padding: 10px 20px 10px 20px;
+                                text-align: center;
+                                margin: 0 5px;
+                                background-color: transparent;
+                                color: #fff;
+                                text-transform: uppercase;
+                        
+                                span {
+                                    display: inline-block;
+                                }
+                        
+                                &:hover {
+                                    background-color: #fff;
+                                    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+                                    text-decoration: none;
+                                    color: #181818;
+                                }
+                                &:visited, &:focus {
+                                    text-decoration: none;
+                                }
+                            }                
+                        }
+                    }
                 }
             }
+        
+            &.parallax-2 {
+                background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/chess_bg.jpg");
+            }       
         }
 
-        .wlogo {
-            height: 20px;
-            width: 20px;
-            margin-right: 10px;
+        #experience {
+            /* ============================================================
+            Flexbox
+            ============================================================ */
+            .flex-container {
+                @include flexbox;
+                @include flex-flow(row wrap);
+            
+                .flex-inner {
+                    @include flex(1);
+                    @include flexbox;
+                    @include justify-content(center);
+            
+                    &.first {
+                    order: 1;  
+                    }
+            
+                    &.second {
+                    order: 2;  
+                    }
+                }
+            }
+
+            .wlogo {
+                height: 20px;
+                width: 20px;
+                margin-right: 10px;
+            }
         }
     }
 }
