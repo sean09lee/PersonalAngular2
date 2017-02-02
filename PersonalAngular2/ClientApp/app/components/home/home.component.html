@@ -2,7 +2,7 @@
     <section id="intro" class="module parallax parallax-1">
         <div class="container">
             <div class="left-col">
-                <a href="https://www.linkedin.com/in/sean09lee" target="_blank"><img ng-src="../img/sean_avatar.jpeg" class="avatar" /></a>
+                <a href="https://www.linkedin.com/in/sean09lee" target="_blank"><img ng-src="/img/sean_avatar.jpeg" class="avatar" /></a>
             </div>
             <div class="right-col">
                 <h1>Sean Lee</h1>
@@ -31,30 +31,7 @@
             <header class="">
                 <h2>Work experience</h2>
             </header>
-            <div class="flex-container">
-                <article class="flex-inner first">
-                    <div class="content-block gmi">
-                        <div class="overlay">
-                            <div class="block-content">
-                                <div class="block-title">General Mills</div>
-                                <a class="block-button searchbychar" href="#generalmills" data-target="intro">View Experience</a>
-                                <div class="block-subtitle">Fortune 100</div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex-inner second">
-                    <div class="content-block sparkstarter">
-                        <div class="overlay">
-                            <div class="block-content">
-                                <div class="block-title">SparkStarter</div>
-                                <a class="block-button searchbychar" href="#sparkstarter" data-target="intro">View Experience</a>
-                                <div class="block-subtitle">Mobile Startup</div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <experience></experience>
         </div>
     </section>
     <section id="about" class="module parallax parallax-2">
@@ -63,7 +40,6 @@
         </div>
     </section>
     <section class="module content">
-        <div ng-include="'about.html'"></div>
-        <div ng-include="'partials/gallery.html'"></div>
+        <about></about>
     </section>
 </main>

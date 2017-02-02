@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace PersonalAngular2.Controllers
 {
     [Route("api/[controller]")]
-    public class SampleDataController : Controller
+    public class WorkExperienceController : Controller
     {
         private static string[] Summaries = new[]
         {
@@ -14,10 +14,10 @@ namespace PersonalAngular2.Controllers
         };
 
         [HttpGet("[action]")]
-        public IEnumerable<WeatherForecast> WeatherForecasts()
+        public IEnumerable<WorkExperience> Experiences()
         {
             var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new WorkExperience
             {
                 DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
                 TemperatureC = rng.Next(-20, 55),
@@ -25,7 +25,7 @@ namespace PersonalAngular2.Controllers
             });
         }
 
-        public class WeatherForecast
+        public class WorkExperience
         {
             public string DateFormatted { get; set; }
             public int TemperatureC { get; set; }

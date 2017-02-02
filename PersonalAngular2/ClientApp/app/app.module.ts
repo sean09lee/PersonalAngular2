@@ -3,7 +3,11 @@ import { RouterModule } from '@angular/router';
 import { UniversalModule } from 'angular2-universal';
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
+import { NavMenuDesktopComponent } from './components/navmenu/navmenudesktop.component';
 import { HomeComponent } from './components/home/home.component';
+import { GeneralMillsComponent } from './components/generalmills/generalmills.component';
+import { AboutComponent } from './components/about/about.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 
@@ -12,6 +16,10 @@ import { CounterComponent } from './components/counter/counter.component';
     declarations: [
         AppComponent,
         NavMenuComponent,
+        NavMenuDesktopComponent,
+        GeneralMillsComponent,
+        AboutComponent,
+        ExperienceComponent,
         CounterComponent,
         FetchDataComponent,
         HomeComponent

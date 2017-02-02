@@ -2,61 +2,64 @@
   Navigation Bar
 ============================================================ */
 /* big landscape desktops */
-@media (min-width:1025px) {  
-    nav {
-      width: 100%;
-      background-color: transparent;
-      text-align: center;
-      position: absolute;
-      z-index: 1000;
+
+.navbar-desktop {
+    display: block;
+
+    #nav-header {
+        width: 100%;
+        background-color: transparent;
+        text-align: center;
+        position: absolute;
+        z-index: 1000;
   
-      &.navbar-fixed {
+        &.navbar-fixed {
         background-color: rgba(28, 28, 28, 0.6);
         position: fixed;
         z-index: 2000;
-      }
+        }
 
-      .logolink {
-          padding-top: 5px;
-      }
+        .logolink {
+            padding-top: 5px;
+        }
 
-      .group-left {
+        .group-left {
         float: left;
         height: 100%;
     
         a, a:hover, a:visited, a:active {
-          text-decoration: none;
+            text-decoration: none;
       
-          .header-logo {
+            .header-logo {
             height: 100%;
             width: auto;
             padding: 5px;
         
             &:hover {
-              text-shadow: 0 0 20px white;  
+                text-shadow: 0 0 20px white;  
             }
-          }
+            }
         }
-      }
+        }
   
-      .group-right {
+        .group-right {
         float: right;
         padding-right: 5px;
         height: 100%;
-      }
+        }
   
-      ul {
+        ul {
         list-style: none;
         margin: 0;
         padding: 0;
         text-align: center;
     
         li {
-          display: inline-block;
-          margin: 0 5px;
-          transition: all 0.3s;
+            display: inline-block;
+            margin: 0 5px;
+            transition: all 0.3s;
       
-          a {
+            a {
             background-color: rgba(255, 255, 255, 0);
             color: #fff;
             display: block;
@@ -65,7 +68,7 @@
             padding: 10px 20px;
         
             span {
-              font-size: 25px;
+                font-size: 25px;
             }
         
             &:visited {
@@ -80,8 +83,12 @@
                 text-decoration: none;
                 color: black;
             }
-          }
+            }
         }
-      } 
+        } 
     }
+}
+
+.navbar-mobile {
+    display: none;
 }
