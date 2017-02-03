@@ -36,7 +36,7 @@ You've created a new ASP.NET Core project. [Learn what's new](https://go.microso
 *   [Run tools such as EF migrations and more](https://go.microsoft.com/fwlink/?LinkID=517853)
 *   [Publish to Microsoft Azure Web Apps](https://go.microsoft.com/fwlink/?LinkID=398609)
 
-## Running styles locally
+## Running styles locally with Gulp
  - cd 'path to top level of project'
  - npm install
  - npm install gulp
@@ -48,3 +48,5 @@ You've created a new ASP.NET Core project. [Learn what's new](https://go.microso
 - Note that webpack is used to run  gulp which will compile the scss
 - Can use IIS express to run local hosting
 - with angular 2 html, js, css compile on the fly - no need to rebuild unless you are adding new dependencies or c# changes
+
+### Adding external js and css via webpack

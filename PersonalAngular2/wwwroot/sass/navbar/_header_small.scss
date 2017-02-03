@@ -14,8 +14,8 @@
         }
 
         li .glyphicon {
-        margin-right: 10px;
-    }
+            margin-right: 10px;
+        }
 
         /* Highlighting rules for nav menu items */
         li.link-active a,
@@ -33,7 +33,7 @@
             right: 0;
             z-index: 1;
             height: 100%;
-            width: calc(25% - 20px);
+            //width: calc(25% - 20px);
         }
         .navbar {
             border-radius: 0px;

@@ -1,17 +1,18 @@
 /* *********************************************************
 ************************************************************
                                                             
-	PersonalSite Sass Theme:                                
+	Personal Site Sass Theme:                                
 	Author: Sean Lee                                      
 	Version: 1.0.0                                          
     
     Index
     1. Base styles
-    2. Home page
-    3. Experience template
-    4. General Mills page
-    5. Sparkstarter page
-    6. Contact modal
+    2. Navbar header
+    3. Home page
+    4. Experience template
+    5. General Mills page
+    6. Sparkstarter page
+    7. Contact modal
     
 ************************************************************
 *************************************************************/
@@ -33,35 +34,35 @@
 @import "navbar/header_small";
 
 /*************************************************************
-    2. Home page
+    3. Home page
 *************************************************************/
 @import "home/home_large";
 @import "home/home_medium";
 @import "home/home_small";
 
 /*************************************************************
-    3. Experience template
+    4. Experience template
 *************************************************************/
 @import "experience/experience_large";
 @import "experience/experience_medium";
 @import "experience/experience_small";
 
 /*************************************************************
-    4. General Mills page
+    5. General Mills page
 *************************************************************/
 @import "genmills/genmills_large";
 @import "genmills/genmills_medium";
 @import "genmills/genmills_small";
 
 /*************************************************************
-    5. Sparkstarter page
+    6. Sparkstarter page
 *************************************************************/
 @import "sparkstarter/sparkstarter_large";
 @import "sparkstarter/sparkstarter_medium";
 @import "sparkstarter/sparkstarter_small";
 
 /*************************************************************
-    6. Contact modal
+    7. Contact modal
 *************************************************************/
 @import "contact/contact_large";
 @import "contact/contact_medium";

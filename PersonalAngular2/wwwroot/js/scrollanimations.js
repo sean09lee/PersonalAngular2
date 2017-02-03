@@ -1,4 +1,4 @@
-(function(){
+(function($){
  $(window).scroll(function () {      
         if ($(window).scrollTop() > 50) {
             $('.navbar-desktop').addClass('navbar-fixed');
@@ -7,4 +7,4 @@
             $('.navbar-desktop').removeClass('navbar-fixed');
         }
     });
-})();
+})(jQuery);

@@ -7,6 +7,7 @@ import { NavMenuDesktopComponent } from './components/navmenu/navmenudesktop.com
 import { HomeComponent } from './components/home/home.component';
 import { GeneralMillsComponent } from './components/generalmills/generalmills.component';
 import { SparkstarterComponent } from './components/sparkstarter/sparkstarter.component';
+import { GEHealthcareComponent } from './components/gehealthcare/gehealthcare.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
@@ -21,6 +22,7 @@ import { CounterComponent } from './components/counter/counter.component';
         NavMenuDesktopComponent,
         GeneralMillsComponent,
         SparkstarterComponent,
+        GEHealthcareComponent,
         AboutComponent,
         ContactComponent,
         ExperienceComponent,
@@ -38,6 +40,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'experience', component: ExperienceComponent },
             { path: 'generalmills', component: GeneralMillsComponent },
             { path: 'sparkstarter', component: SparkstarterComponent },
+            { path: 'gehealthcare', component: GEHealthcareComponent },
             { path: 'about', component: AboutComponent },
             { path: 'contact', component: ContactComponent },
             { path: '**', redirectTo: 'home' }

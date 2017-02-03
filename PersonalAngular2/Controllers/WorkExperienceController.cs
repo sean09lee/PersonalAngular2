@@ -25,7 +25,15 @@ namespace PersonalAngular2.Controllers
                 Route = "/sparkstarter",
                 ClassName = "sparkstarter"
             };
-            var exp = new[] { gmi, sparkstarter };
+            var gehealthcare = new WorkExperience
+            {
+                Title = "GE Healthcare",
+                Description = "Fortune 100",
+                Subtitle = "Fortune 100",
+                Route = "/gehealthcare",
+                ClassName = "gehealthcare"
+            };
+            var exp = new[] { gmi, sparkstarter, gehealthcare };
             return exp;
         }
 

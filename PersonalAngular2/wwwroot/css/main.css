@@ -1,17 +1,18 @@
 /* *********************************************************
 ************************************************************
                                                             
-	PersonalSite Sass Theme:                                
+	Personal Site Sass Theme:                                
 	Author: Sean Lee                                      
 	Version: 1.0.0                                          
     
     Index
     1. Base styles
-    2. Home page
-    3. Experience template
-    4. General Mills page
-    5. Sparkstarter page
-    6. Contact modal
+    2. Navbar header
+    3. Home page
+    4. Experience template
+    5. General Mills page
+    6. Sparkstarter page
+    7. Contact modal
     
 ************************************************************
 *************************************************************/
@@ -371,8 +372,7 @@ footer {
       left: 0;
       right: 0;
       z-index: 1;
-      height: 100%;
-      width: calc(25% - 20px); }
+      height: 100%; }
     .navbar-mobile .navbar {
       border-radius: 0px;
       border-width: 0px;
@@ -399,13 +399,13 @@ footer {
       text-overflow: ellipsis; } }
 
 /*************************************************************
-    2. Home page
+    3. Home page
 *************************************************************/
 /* big landscape desktops */
 #home {
   /* ============================================================
-        SECTIONS
-        ============================================================ */ }
+    SECTIONS
+    ============================================================ */ }
   #home section h2 {
     margin-bottom: 40px;
     font-size: 30px; }
@@ -470,8 +470,8 @@ footer {
     background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/chess_bg.jpg"); }
   #home #experience {
     /* ============================================================
-            Flexbox
-            ============================================================ */ }
+        Flexbox
+        ============================================================ */ }
     #home #experience .flex-container {
       display: -webkit-box;
       display: -webkit-flex;
@@ -483,6 +483,7 @@ footer {
       -ms-flex-flow: row wrap;
       flex-flow: row wrap; }
       #home #experience .flex-container .flex-inner {
+        padding: 20px;
         -webkit-box-flex: 1;
         -webkit-flex: 1;
         -moz-box-flex: 1;
@@ -525,7 +526,7 @@ footer {
       font-size: 96px; } }
 
 /*************************************************************
-    3. Experience template
+    4. Experience template
 *************************************************************/
 .content-block {
   width: 320px;
@@ -536,6 +537,8 @@ footer {
     background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/gmi_bg.jpg"); }
   .content-block.sparkstarter {
     background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/dating_bg.jpg"); }
+  .content-block.gehealthcare {
+    background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg"); }
   .content-block .overlay {
     height: 100%;
     width: 100%; }
@@ -585,17 +588,17 @@ footer {
         padding-top: 10px; }
 
 /*************************************************************
-    4. General Mills page
+    5. General Mills page
 *************************************************************/
 #genmills .parallax-gmi {
-  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/genmills_bg.jpg"); }
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/gmi_bg.jpg"); }
 
 /*************************************************************
-    5. Sparkstarter page
+    6. Sparkstarter page
 *************************************************************/
 #sparkstarter .parallax-sparkstarter {
-  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url(../img/backgrounds/sparkstarter_bg.jpg); }
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/dating_bg.jpg"); }
 
 /*************************************************************
-    6. Contact modal
+    7. Contact modal
 *************************************************************/

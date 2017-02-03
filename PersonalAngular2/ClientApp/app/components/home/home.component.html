@@ -7,9 +7,14 @@
             <div class="right-col">
                 <h1>Sean Lee</h1>
                 <h2>Techie, foodie, and aspiring full-stack developer</h2>
-                <div class="intro_buttons">
+                <div class="intro_buttons row">
                     <a class="resume" href="../docs/resume.pdf" target="_blank"><span>Resume</span></a>
-                    <a href="mailto:sean09lee@gmail.com"><span>Contact</span></a>
+                    <a href="#" [routerLink]="['/contact']"><span>Contact</span></a>
+                </div>
+                <div class="social_bottons row" >
+                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -25,13 +30,18 @@
             </p>
         </div>
     </section>
-    <hr>
+    <hr />
     <section id="experience" class="module content">
         <div class="container">
-            <header class="">
-                <h2>Work experience</h2>
-            </header>
+            <h2>Work experience</h2>
             <experience></experience>
+        </div>
+    </section>
+    <hr />
+    <section id="technical" class="module content">
+        <div class="container">
+            <h2>Technical stack</h2>
+
         </div>
     </section>
     <section id="about" class="module parallax parallax-2">

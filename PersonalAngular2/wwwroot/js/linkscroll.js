@@ -1,4 +1,4 @@
-(function(){
+(function($){
     $(document).on('click','.searchbychar', function(event) {
         event.preventDefault();
         var target = "#" + this.getAttribute('data-target');
@@ -8,4 +8,4 @@
             }, 500);
         }
     });
-})();
+})(jQuery);
