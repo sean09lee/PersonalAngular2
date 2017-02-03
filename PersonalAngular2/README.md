@@ -55,3 +55,7 @@ You've created a new ASP.NET Core project. [Learn what's new](https://go.microso
 -- open command window to (cd C:\Projects\PersonalAngular2\PersonalAngular2)
 -- run the following: webpack --config webpack.config.vendor.js
 Note: if the last step fails, try running this first to install webpack globally: npm install -g webpack 
+
+### Package.json explained
+This contains dependencies and devdependencies. dependencies or third party libraries necessary to running the application. devdependencies are third party
+libaries that help you develop the application; like gulp.

@@ -475,17 +475,17 @@ footer {
   section.parallax h1 {
     font-size: 100px; } }
 
-@media all and (min-width: 600px) {
-  section h1 {
-    font-size: 34px; }
-  section h2 {
-    font-size: 26px; }
-  section p {
-    font-size: 16px; }
-  section.parallax {
-    padding: 150px 0; }
-    section.parallax h1 {
-      font-size: 96px; } }
+@media (max-width: 600px) {
+  #home section.parallax {
+    padding: 100px 0; }
+    #home section.parallax h1 {
+      font-size: 34px; }
+    #home section.parallax h2 {
+      font-size: 26px; }
+    #home section.parallax p {
+      font-size: 16px; }
+  #home section.parallax-1 .container .left-col {
+    display: none; } }
 
 /*************************************************************
     4. Experience template

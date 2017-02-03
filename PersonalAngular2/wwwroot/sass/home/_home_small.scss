@@ -1,20 +1,24 @@
 // Overwrite for phone
-@media all and (min-width: 600px) {
-  section {
-    h1{
-      font-size: 34px;
+@media (max-width: 600px) {
+    #home { 
+        section {
+            &.parallax {
+                padding: 100px 0;
+                h1 {
+                    font-size: 34px;
+                }
+                h2 {
+                    font-size: 26px;
+                }
+                p {
+                    font-size: 16px;  
+                }
+            }
+            &.parallax-1 .container {
+                .left-col {
+                    display: none;
+                }
+            }
+        }
     }
-    h2 {
-      font-size: 26px;
-    }
-    p {
-      font-size: 16px;  
-    }
-  }
-  section.parallax {
-    padding: 150px 0;
-    h1 {
-      font-size: 96px;  
-    }
-  }
 }

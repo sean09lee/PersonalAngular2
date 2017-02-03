@@ -9,6 +9,7 @@
     "webpack": "^2.2.0"
   },
   "devDependencies": {
+    "angular-matchmedia": "^1.0.0",
     "gulp": "^3.9.1"
   },
   "scripts": {
