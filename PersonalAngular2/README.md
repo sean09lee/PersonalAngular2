@@ -50,3 +50,8 @@ You've created a new ASP.NET Core project. [Learn what's new](https://go.microso
 - with angular 2 html, js, css compile on the fly - no need to rebuild unless you are adding new dependencies or c# changes
 
 ### Adding external js and css via webpack
+-- add your external library via npm (ex. npm install font-awesome)
+-- modify package.json with reference and version (ex. "font-awesome": "^4.7.0",)
+-- open command window to (cd C:\Projects\PersonalAngular2\PersonalAngular2)
+-- run the following: webpack --config webpack.config.vendor.js
+Note: if the last step fails, try running this first to install webpack globally: npm install -g webpack 

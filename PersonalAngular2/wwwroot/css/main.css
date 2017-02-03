@@ -466,6 +466,8 @@ footer {
               color: #181818; }
             #home section.parallax-1 .container .right-col .intro_buttons a:visited, #home section.parallax-1 .container .right-col .intro_buttons a:focus {
               text-decoration: none; }
+        #home section.parallax-1 .container .right-col .social_bottons {
+          padding-top: 20px; }
   #home section.parallax-2 {
     background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/chess_bg.jpg"); }
   #home #experience {
