@@ -1,5 +1,5 @@
 <div class='main-nav'>
-    <div class='navbar navbar-inverse'>
+    <div class='navbar navbar-inverse navbar-fixed-top'>
         <div class='navbar-header'>
             <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
                 <span class='sr-only'>Toggle navigation</span>
@@ -7,7 +7,7 @@
                 <span class='icon-bar'></span>
                 <span class='icon-bar'></span>
             </button>
-            <!--<a class='navbar-brand logolink' [routerLink]="['/home']"><img src="/img/icons/logo/logo_white_40x40.svg" alt="logo" /></a>-->
+            <a class='navbar-brand logolink' [routerLink]="['/home']"><img src="/img/icons/logo/logo_white_40x40.svg" alt="logo" /></a>
         </div>
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse'>
@@ -18,28 +18,18 @@
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/counter']">
-                        <span class='glyphicon glyphicon-education'></span> Counter
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/fetch-data']">
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/experience']">
                         <span class='glyphicon glyphicon-education'></span> Experience
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/about']">
-                        <span class='glyphicon glyphicon-th-list'></span> About
+                        <span class='fa fa-id-badge'></span> About
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/contact']">
-                        <span class='glyphicon glyphicon-th-list'></span> Contact
+                        <span class='fa fa-address-book'></span> Contact
                     </a>
                 </li>
             </ul>

@@ -354,49 +354,9 @@ footer {
   .navbar-desktop {
     display: none; }
   .navbar-mobile {
-    display: block;
-    /* Highlighting rules for nav menu items */
-    /* Keep the nav menu independent of scrolling and on top of other items */ }
+    display: block; }
     .navbar-mobile .logolink {
-      padding-top: 5px; }
-    .navbar-mobile li .glyphicon {
-      margin-right: 10px; }
-    .navbar-mobile li.link-active a,
-    .navbar-mobile li.link-active a:hover,
-    .navbar-mobile li.link-active a:focus {
-      background-color: #4189C7;
-      color: white; }
-    .navbar-mobile .main-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      height: 100%; }
-    .navbar-mobile .navbar {
-      border-radius: 0px;
-      border-width: 0px;
-      height: 100%; }
-    .navbar-mobile .navbar-header {
-      float: none; }
-    .navbar-mobile .navbar-collapse {
-      border-top: 1px solid #444;
-      padding: 0px; }
-    .navbar-mobile .navbar ul {
-      float: none; }
-    .navbar-mobile .navbar li {
-      float: none;
-      font-size: 15px;
-      margin: 6px; }
-    .navbar-mobile .navbar li a {
-      padding: 10px 16px;
-      border-radius: 4px; }
-    .navbar-mobile .navbar a {
-      /* If a menu item's text is too long, truncate it */
-      width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; } }
+      padding-top: 10px; } }
 
 /*************************************************************
     3. Home page
