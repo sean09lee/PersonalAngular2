@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PersonalAngular2.Controllers
@@ -8,36 +6,36 @@ namespace PersonalAngular2.Controllers
     [Route("api/[controller]")]
     public class WorkExperienceController : Controller
     {
-        private static string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         [HttpGet("[action]")]
         public IEnumerable<WorkExperience> Experiences()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WorkExperience
+            var gmi = new WorkExperience
             {
-                DateFormatted = DateTime.Now.AddDays(index).ToString("d"),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            });
+                Title = "General Mills",
+                Description = "Fortune 100",
+                Subtitle = "Fortune 100",
+                Route = "/generalmills",
+                ClassName = "gmi"
+            };
+            var sparkstarter = new WorkExperience
+            {
+                Title = "Sparkstarter",
+                Description = "Fortune 100",
+                Subtitle = "Mobile Startup",
+                Route = "/sparkstarter",
+                ClassName = "sparkstarter"
+            };
+            var exp = new[] { gmi, sparkstarter };
+            return exp;
         }
 
         public class WorkExperience
         {
-            public string DateFormatted { get; set; }
-            public int TemperatureC { get; set; }
-            public string Summary { get; set; }
-
-            public int TemperatureF
-            {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
-            }
+            public string Title { get; set; }
+            public string Description { get; set; }
+            public string Subtitle { get; set; }
+            public string Route { get; set; }
+            public string ClassName { get; set; }
         }
     }
 }

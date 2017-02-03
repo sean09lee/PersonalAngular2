@@ -1,22 +1,11 @@
 <div class="flex-container">
-    <article class="flex-inner first">
-        <div class="content-block gmi">
+    <article *ngFor="let experience of experiences" class="flex-inner">
+        <div class="content-block" [ngClass]="experience.className">
             <div class="overlay">
                 <div class="block-content">
-                    <div class="block-title">General Mills</div>
-                    <a class="block-button searchbychar" href="#generalmills" data-target="intro">View Experience</a>
-                    <div class="block-subtitle">Fortune 100</div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article class="flex-inner second">
-        <div class="content-block sparkstarter">
-            <div class="overlay">
-                <div class="block-content">
-                    <div class="block-title">SparkStarter</div>
-                    <a class="block-button searchbychar" href="#sparkstarter" data-target="intro">View Experience</a>
-                    <div class="block-subtitle">Mobile Startup</div>
+                    <div class="block-title">{{ experience.title }}</div>
+                    <a class="block-button searchbychar" href="#" [routerLink]="experience.route">View Experience</a>
+                    <div class="block-subtitle">{{ experience.subtitle }}</div>
                 </div>
             </div>
         </div>

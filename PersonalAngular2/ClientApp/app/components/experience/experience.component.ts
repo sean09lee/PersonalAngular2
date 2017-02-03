@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
     selector: 'experience',
@@ -8,15 +9,16 @@ export class ExperienceComponent {
     public experiences: WorkExperience[];
 
     constructor(http: Http) {
-        http.get('/api/SampleData/WeatherForecasts').subscribe(result => {
+        http.get('/api/WorkExperience/Experiences').subscribe(result => {
             this.experiences = result.json();
         });
     }
 }
 
 interface WorkExperience {
-    dateFormatted: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
+    title: string;
+    description: string;
+    subtitle: string;
+    route: string;
+    classname: string;
 }

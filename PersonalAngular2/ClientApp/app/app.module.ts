@@ -6,7 +6,9 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { NavMenuDesktopComponent } from './components/navmenu/navmenudesktop.component';
 import { HomeComponent } from './components/home/home.component';
 import { GeneralMillsComponent } from './components/generalmills/generalmills.component';
+import { SparkstarterComponent } from './components/sparkstarter/sparkstarter.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -18,7 +20,9 @@ import { CounterComponent } from './components/counter/counter.component';
         NavMenuComponent,
         NavMenuDesktopComponent,
         GeneralMillsComponent,
+        SparkstarterComponent,
         AboutComponent,
+        ContactComponent,
         ExperienceComponent,
         CounterComponent,
         FetchDataComponent,
@@ -31,6 +35,11 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'experience', component: ExperienceComponent },
+            { path: 'generalmills', component: GeneralMillsComponent },
+            { path: 'sparkstarter', component: SparkstarterComponent },
+            { path: 'about', component: AboutComponent },
+            { path: 'contact', component: ContactComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
