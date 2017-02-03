@@ -390,7 +390,8 @@ footer {
         align-self: center; }
         #home section.parallax-1 .container .left-col .avatar {
           border-radius: 100%;
-          box-shadow: 10px 10px 5px #888888; }
+          box-shadow: 10px 10px 5px #888888;
+          width: 175px; }
         #home section.parallax-1 .container .left-col .avatar:hover {
           box-shadow: 0 0 20px white; }
         #home section.parallax-1 .container .left-col a, #home section.parallax-1 .container .left-col a:hover, #home section.parallax-1 .container .left-col a:focus, #home section.parallax-1 .container .left-col a:visited {
@@ -471,9 +472,11 @@ footer {
       width: 20px;
       margin-right: 10px; }
 
-@media all and (min-width: 960px) {
-  section.parallax h1 {
-    font-size: 100px; } }
+@media all and (min-width: 700px) {
+  #home section.parallax h1 {
+    font-size: 100px; }
+  #home section.parallax.parallax-1 .container .left-col .avatar {
+    width: 150px; } }
 
 @media (max-width: 600px) {
   #home section.parallax {
@@ -549,17 +552,29 @@ footer {
         font-style: italic;
         padding-top: 10px; }
 
+@media all and (max-width: 600px) {
+  .content-block {
+    max-width: 250px; } }
+
 /*************************************************************
     5. General Mills page
 *************************************************************/
 #genmills .parallax-gmi {
   background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/gmi_bg.jpg"); }
 
+@media all and (max-width: 600px) {
+  #genmills .parallax h1 {
+    font-size: 34px; } }
+
 /*************************************************************
     6. Sparkstarter page
 *************************************************************/
 #sparkstarter .parallax-sparkstarter {
   background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/dating_bg.jpg"); }
+
+@media all and (max-width: 600px) {
+  #sparkstarter .parallax h1 {
+    font-size: 34px; } }
 
 /*************************************************************
     7. Contact modal
