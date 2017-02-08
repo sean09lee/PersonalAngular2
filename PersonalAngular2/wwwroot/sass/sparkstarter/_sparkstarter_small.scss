@@ -1,5 +1,8 @@
 @media all and (max-width: 600px) {
     #sparkstarter {
+        .container {
+            padding: 0 20px 0 20px;
+        }
         .parallax {
             h1 {
                 font-size: 34px;

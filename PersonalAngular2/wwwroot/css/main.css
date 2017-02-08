@@ -9,10 +9,11 @@
     1. Base styles
     2. Navbar header
     3. Home page
-    4. Experience template
-    5. General Mills page
-    6. Sparkstarter page
-    7. Contact modal
+    4. Contact modal
+    5. Experience template
+    6. General Mills page
+    7. Sparkstarter page
+    8. GEHealthcare page 
     
 ************************************************************
 *************************************************************/
@@ -119,9 +120,8 @@ main {
 
 .container {
   width: 100%;
-  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 50px 0  50px; }
 
 section.parallax {
   padding: 150px 0;
@@ -161,44 +161,6 @@ header .logo img {
   display: inline-block;
   vertical-align: middle; }
 
-header .social {
-  text-align: center; }
-
-header .social a {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 5px;
-  width: 30px;
-  height: 30px;
-  color: transparent;
-  font-size: 0;
-  text-indent: -9999px;
-  background-size: 30px 30px;
-  background-image: url("/img/icons/social-light.png");
-  background-image: url("/img/icons/social-light.svg"), none;
-  background-size: 180px 30px; }
-
-header .social a.fb {
-  background-position: 0 0; }
-
-header .social a.twitter {
-  background-position: -30px 0; }
-
-header .social a.googleplus {
-  background-position: -60px 0; }
-
-header .social a.rss {
-  background-position: -90px 0; }
-
-header .social a.email {
-  background-position: -120px 0; }
-
-header .social a.search {
-  background-position: -150px 0; }
-
-header .social a:hover {
-  opacity: 0.4; }
-
 @media all and (min-width: 600px) {
   header .branding {
     padding-left: 60px; }
@@ -210,21 +172,7 @@ header .social a:hover {
     height: 60px; }
   header .logo img {
     display: block;
-    margin: 0; }
-  header .social {
-    padding: 15px 0;
-    float: right;
-    width: 100%;
-    text-align: right; } }
-
-/* site title */
-.site-title {
-  padding: 5px 0;
-  background-color: black;
-  text-align: center; }
-
-.site-title h1 {
-  color: #fff; }
+    margin: 0; } }
 
 /* ============================================================
   TEXT LEVEL SEMANTICS
@@ -479,6 +427,8 @@ footer {
     width: 150px; } }
 
 @media (max-width: 600px) {
+  #home section .container {
+    padding: 0 20px 0 20px; }
   #home section.parallax {
     padding: 100px 0; }
     #home section.parallax h1 {
@@ -491,7 +441,10 @@ footer {
     display: none; } }
 
 /*************************************************************
-    4. Experience template
+    4. Contact modal
+*************************************************************/
+/*************************************************************
+    5. Experience template
 *************************************************************/
 .content-block {
   width: 320px;
@@ -503,7 +456,7 @@ footer {
   .content-block.sparkstarter {
     background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/dating_bg.jpg"); }
   .content-block.gehealthcare {
-    background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/desk_bg.jpg"); }
+    background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.6) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/san_diego.jpg"); }
   .content-block .overlay {
     height: 100%;
     width: 100%; }
@@ -557,25 +510,37 @@ footer {
     max-width: 250px; } }
 
 /*************************************************************
-    5. General Mills page
+    6. General Mills page
 *************************************************************/
-#genmills .parallax-gmi {
+#genmills .parallax {
   background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/gmi_bg.jpg"); }
 
 @media all and (max-width: 600px) {
+  #genmills .container {
+    padding: 0 20px 0 20px; }
   #genmills .parallax h1 {
     font-size: 34px; } }
 
 /*************************************************************
-    6. Sparkstarter page
+    7. Sparkstarter page
 *************************************************************/
-#sparkstarter .parallax-sparkstarter {
+#sparkstarter .parallax {
   background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/dating_bg.jpg"); }
 
 @media all and (max-width: 600px) {
+  #sparkstarter .container {
+    padding: 0 20px 0 20px; }
   #sparkstarter .parallax h1 {
     font-size: 34px; } }
 
 /*************************************************************
-    7. Contact modal
+    8. GEHeakthcare page
 *************************************************************/
+#gehealthcare .parallax {
+  background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.5) 0%, rgba(48, 48, 48, 0.5) 100%), url("/img/backgrounds/san_diego.jpg"); }
+
+@media all and (max-width: 600px) {
+  #gehealthcare .parallax .container {
+    padding: 0 20px 0 20px; }
+  #gehealthcare .parallax h1 {
+    font-size: 34px; } }

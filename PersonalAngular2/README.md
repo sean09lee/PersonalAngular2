@@ -59,3 +59,7 @@ Note: if the last step fails, try running this first to install webpack globally
 ### Package.json explained
 This contains dependencies and devdependencies. dependencies or third party libraries necessary to running the application. devdependencies are third party
 libaries that help you develop the application; like gulp.
+
+### Updating packages
+To update an npm dependency, run: npm install [package name] --save
+then update the package.json to match the version. Can use ^ to say non-specific version

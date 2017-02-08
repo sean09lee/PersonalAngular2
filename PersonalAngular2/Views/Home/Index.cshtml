@@ -2,15 +2,9 @@
     ViewData["Title"] = "Sean Lee";
 }
 
-<app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>
+<app style="display: block;">Loading...</app>
 
 <script src="~/dist/vendor.js" asp-append-version="true"></script>
 @section scripts {
     <script src="~/dist/main-client.js" asp-append-version="true"></script>
-    <script>
-    if (screen && screen.width > 480) {
-        document.write('<script type="text/javascript" src="/js/scrollanimations.js"><\/script>');
-        document.write('<script type="text/javascript" src="/js/linkscroll.js"><\/script>');
-    }
-    </script>
 }

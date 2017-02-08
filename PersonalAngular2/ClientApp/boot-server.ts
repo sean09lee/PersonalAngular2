@@ -1,4 +1,5 @@
 import 'angular2-universal-polyfills';
+import './app/_workaround.browser';
 import 'zone.js';
 import { enableProdMode } from '@angular/core';
 import { platformNodeDynamic } from 'angular2-universal';

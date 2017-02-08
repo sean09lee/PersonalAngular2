@@ -1,6 +1,10 @@
 @media all and (max-width: 600px) {
     #gehealthcare {
         .parallax {
+            .container {
+                padding: 0 20px 0 20px;
+            }
+
             h1 {
                 font-size: 34px;
             }
